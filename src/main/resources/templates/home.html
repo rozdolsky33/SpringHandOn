@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+
+<head th:replace="common/header :: common-header" />
+
+<body>
+<div class="container">
+
+<div th:replace="common/navbar :: common-navbar"></div>
+
+	<h1>Thymeleaf Template Engine</h1>
+	<form th:action="@{/home}" th:object="${person}" method="post">
+
+		<!-- <div>
+			Set Your Unique Number (ID): <input type="text" th:field="*{id}" />
+		</div> -->
+
+		<div class="form-group">
+			<label for="fistName">First Name</label> <input type="text"
+				class="form-control" id="firstName" placeholder="First Name"
+				th:field="*{firstName}" />
+		</div>
+
+		<div class="form-group">
+			<label for="fistName">Last Name</label> <input type="text"
+				class="form-control" id="lastName" placeholder="Last Name"
+				th:field="*{lastName}" />
+		</div>
+
+		<!-- 	<div>
+			What is your age: <input type="text" th:field="*{age}" />
+		</div> -->
+
+
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label> <input
+				type="email" class="form-control" id="email"
+				placeholder="Enter email" th:field="*{email}" />
+		</div>
+		<!-- 
+		<div>
+			User Name: <input type="text" th:field="*{userName}" />
+		</div>
+
+		<div>
+			Password: <input type="password" th:field="*{password}" />
+		</div> -->
+
+		<button type="submit" class="btn btn-primary">Submit</button>
+
+	</form>
+</div>
+
+
+<div th:replace="common/header :: body-bottom-scripts" />
+
+</body>
+</html>

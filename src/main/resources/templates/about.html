@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+
+<head th:replace="common/header :: common-header" />
+
+<body>
+	<div class="container">
+
+		<div th:replace="common/navbar :: common-navbar"></div>
+		
+		<h1>This is About Page</h1>
+		
+		<div>
+			<label for="field1" th:text="#{field1}"></label>
+			<input type="text" id="field1" name="field1"/>
+		</div>
+		
+		<div>
+			<label for="field2" th:text="#{field2}"> </label>
+			<input type="text" id="field2" name="field2"/>
+		</div>
+		
+
+		<div th:replace="common/header :: body-bottom-scripts" />
+		</div>
+</body>
+</html>
